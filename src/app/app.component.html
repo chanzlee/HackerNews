@@ -1,18 +1,21 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">{{title}}</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="comments">Comments</a></li>
-      <li><a routerLink="jobs">Jobs</a></li>
-      <li><a routerLink="links">Links</a></li>
-      <li><a routerLink="">New</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="topnav">
+  <a class="navbar-brand" routerLink="">{{title}}</a>
+  <a href="#contact"> Contact</a>
+  <a href="#about">About</a>
+</div>
+  <br>
+  
+   
 
 <div class="container">
-  <h1>Today's B.ig S.creen</h1>
+  <div class="col-md-12">
+      <h1 style="text-align: center">Today's B.ig S.creen</h1>
+  </div>
+  <hr>
+  <div class="navbar">
+      <div class="col-4-md"><a routerLink="comments">Comments</a></div>   
+      <div class="col-4-md"><a routerLink="">New</a></div>
+      <div class="col-4-md"><a routerLink="jobs">Jobs</a></div>
+  </div>
   <router-outlet></router-outlet>
 </div>

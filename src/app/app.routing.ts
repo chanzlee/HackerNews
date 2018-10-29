@@ -4,6 +4,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 const appRoutes: Routes = [
       {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
       {
         path: 'comments',
         component: CommentsComponent
+      },
+      {
+        path: 'post/:id',
+        component: PostDetailComponent
       }
 ];
 
