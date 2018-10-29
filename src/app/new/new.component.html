@@ -1,5 +1,5 @@
 <div class="container">
   <ol>
-    <li><a href="https://cloud.google.com/pubsub/docs/ordering">On Message Ordering</a></li>
+    <li *ngFor="let post of posts" (click)="goToDetailPage(album)"><a href="post.link">{{post.title}} ({{post.link}})</a></li>
   </ol>
 </div>

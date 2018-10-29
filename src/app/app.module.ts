@@ -9,6 +9,7 @@ import { NewComponent } from './new/new.component';
 import { CommentsComponent } from './comments/comments.component';
 import { LinksComponent } from './links/links.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { JobsComponent } from './jobs/jobs.component';
     NewComponent,
     CommentsComponent,
     LinksComponent,
-    JobsComponent
+    JobsComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,
