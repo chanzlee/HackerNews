@@ -1,13 +1,19 @@
-<div class="col-md-12"><h2>cft 0 minutes ago | parent | on: Facebook exodus: 44 percent of American users ages...
+<form>
+    <div class="form-group">
+        <label for="firstName">First Name: </label>
+        <input required minlength="3" maxlength="10" ngModel name="firstName" #firstName="ngModel" (change)=log(firstName)
+            id="firstName" type="text" class="form-control">
+            <br>
+            <label for="comment">New Comment</label>
+            <input name="comment" type="text" class="form-control">
 
-But they are running out of potential sites to buy. I wonder if they have offered to buy Reddit?
-
-
-nine_k 0 minutes ago | parent | on: U.K. To Roll Out Developed World’s First ‘Digital’...
-
-So you see it as a tariff? Do not let the more efficient foreign player in, to let the local equivalent develop?
-Economically it does not make sense, if we are looking for a global optimum (literally); this is the standard free-trade argument.
-
-It may make sense if there's no global trust; you don't want to depend on products of a potential unfriendly party, or let them have a large foothold in your economy, just, well, in case.
-
-But here I (also) see the desire to milk a cow that can be milked.</h2></div>
+        <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors.required">First name is required.
+            </div>
+            <div *ngIf="firstName.errors.minlength">
+                First name should be minimum {{firstName.errors.minlength.requiredLength}} characters.
+            </div>
+        </div>
+    </div>
+        <button (click)="submitThis(firstName, comment)" class="btn btn-primary">Submit</button>
+</form>

@@ -20,4 +20,8 @@ export class NewComponent {
     this.router.navigate(['post', clickedPost.id]);
   };
 
+  submitComment(firstName: string, comment: string) {
+    let newPost = new Post(firstName, comment);
+  }
+
 }

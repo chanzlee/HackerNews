@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
+  log(x) {
+    console.log(x);
+  }
   constructor() { }
 
   ngOnInit() {
